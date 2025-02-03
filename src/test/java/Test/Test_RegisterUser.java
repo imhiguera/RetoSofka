@@ -2,6 +2,7 @@ package Test;
 
 import Page.Base;
 import Page.Page_registerUser;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
 public class Test_RegisterUser extends Base {
@@ -14,7 +15,9 @@ public class Test_RegisterUser extends Base {
         driver=pageRegisterUser.chromeDriverConnection();
         pageRegisterUser.visit("https://automationexercise.com/");
     }
-    public void Test(){
+
+    @Test
+    public void RegistrarUsuario(){
         pageRegisterUser.RegisterUser();
         pageRegisterUser.EnterCredential("IsabelTest","imhiguera022487@gmail.com");
         pageRegisterUser.selectCountry("Canada");
